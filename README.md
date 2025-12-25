@@ -178,7 +178,8 @@ AIGroup Market MCP Server 是一个专为金融数据分析打造的 MCP 服务�
         "company_performance_us",
         "csi_index_constituents",
         "dragon_tiger_inst",
-        "hot_news_7x24"
+        "hot_news_7x24",
+        "kpl_list"
       ]
     }
   }
@@ -219,7 +220,8 @@ AIGroup Market MCP Server 是一个专为金融数据分析打造的 MCP 服务�
         "company_performance_us",
         "csi_index_constituents",
         "dragon_tiger_inst",
-        "hot_news_7x24"
+        "hot_news_7x24",
+        "kpl_list"
       ]
     }
   }
@@ -290,6 +292,29 @@ AIGroup Market MCP Server 是一个专为金融数据分析打造的 MCP 服务�
 }
 ```
 
+#### 📊 查询涨停榜数据
+
+```typescript
+// 查询指定日期的涨停股票
+{
+  "tool": "kpl_list",
+  "arguments": {
+    "trade_date": "20240927",
+    "tag": "涨停"
+  }
+}
+
+// 查询指定日期范围的炸板股票
+{
+  "tool": "kpl_list",
+  "arguments": {
+    "start_date": "20240901",
+    "end_date": "20240930",
+    "tag": "炸板"
+  }
+}
+```
+
 ## 🛠️ 工具清单
 
 | 工具名称 | 功能描述 | 数据来源 |
@@ -311,6 +336,8 @@ AIGroup Market MCP Server 是一个专为金融数据分析打造的 MCP 服务�
 | `csi_index_constituents` | 中证指数成分股数据 | Tushare |
 | `dragon_tiger_inst` | 龙虎榜机构成交明细 | Tushare |
 | `hot_news_7x24` | 7×24热点新闻 | Tushare |
+| `basic_info` | 基础信息数据 | Tushare |
+| `kpl_list` | 开盘啦榜单数据（涨停/跌停/炸板） | Tushare |
 
 ## 📊 数据源说明
 

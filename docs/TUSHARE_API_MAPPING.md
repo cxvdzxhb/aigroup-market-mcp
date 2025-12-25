@@ -1,8 +1,8 @@
 # Tushare API 接口对照文档
 
 > 本文档记录项目中所有工具与Tushare官方API接口的对应关系，便于维护和升级。
-> 
-> **最后更新时间**: 2025-11-08
+>
+> **最后更新时间**: 2025-12-25
 > 
 > **官方文档**: https://tushare.pro/document/2
 
@@ -206,6 +206,12 @@
 |---------|------------|------------|---------|------|
 | top_inst | `top_inst` | [doc_id=107](https://tushare.pro/document/2?doc_id=107) | 2000积分 | 龙虎榜机构成交明细 |
 
+### kplList.ts
+
+| 工具函数 | Tushare API | 官方文档链接 | 积分要求 | 说明 |
+|---------|------------|------------|---------|------|
+| kpl_list | `kpl_list` | [doc_id=347](https://tushare.pro/document/2?doc_id=347) | 5000积分 | 开盘啦榜单数据（涨停/跌停/炸板） |
+
 ### csiIndexConstituents.ts
 
 | 工具函数 | Tushare API | 官方文档链接 | 积分要求 | 说明 |
@@ -311,6 +317,6 @@ A: 参考官方文档的错误码说明：https://tushare.pro/document/1?doc_id=
 
 ---
 
-**文档维护者**: AI Group Market MCP Team  
-**最后更新**: 2025-11-08  
-**版本**: 1.0.0
+**文档维护者**: AI Group Market MCP Team
+**最后更新**: 2025-12-25
+**版本**: 1.0.1

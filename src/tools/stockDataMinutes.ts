@@ -40,7 +40,7 @@ export const stockDataMinutes = {
   async run(args: { code: string; market_type: string; start_datetime: string; end_datetime: string; freq: string }) {
     try {
       const TUSHARE_API_KEY = TUSHARE_CONFIG.API_TOKEN;
-      const TUSHARE_API_URL = TUSHARE_CONFIG.API_URL;
+      const TUSHARE_API_URL = "http://stk_mins.xiximiao.com/dataapi";
 
       // 归一化时间：转为 YYYYMMDDHHmmss（剔除非数字）
       const normalizeDT = (v: string) => v.replace(/[^0-9]/g, '').padEnd(14, '0').slice(0, 14);

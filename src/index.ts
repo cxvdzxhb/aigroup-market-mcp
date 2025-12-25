@@ -26,6 +26,12 @@ import { csiIndexConstituents } from './tools/csiIndexConstituents.js';
 import { dragonTigerInst } from './tools/dragonTigerInst.js';
 import { hotNews } from './tools/hotNews.js';
 import { basicInfo } from './tools/basicInfo.js';
+import { kplList } from './tools/kplList.js';
+import { topList } from './tools/topList.js';
+import { limitListThs } from './tools/limitListThs.js';
+import { limitCptList } from './tools/limitCptList.js';
+import { hmList } from './tools/hmList.js';
+import { hmDetail } from './tools/hmDetail.js';
 
 // 创建 MCP Server 实例，启用通知防抖
 const server = new McpServer(
@@ -157,7 +163,13 @@ const tools = [
   { tool: csiIndexConstituents, runner: (args: any) => csiIndexConstituents.run(args) },
   { tool: dragonTigerInst, runner: (args: any) => dragonTigerInst.run(args) },
   { tool: hotNews, runner: (args: any) => hotNews.run(args) },
-  { tool: basicInfo, runner: (args: any) => basicInfo.run(args) }
+  { tool: basicInfo, runner: (args: any) => basicInfo.run(args) },
+  { tool: kplList, runner: (args: any) => kplList.run(args) },
+  { tool: topList, runner: (args: any) => topList.run(args) },
+  { tool: limitListThs, runner: (args: any) => limitListThs.run(args) },
+  { tool: limitCptList, runner: (args: any) => limitCptList.run(args) },
+  { tool: hmList, runner: (args: any) => hmList.run(args) },
+  { tool: hmDetail, runner: (args: any) => hmDetail.run(args) }
 ];
 
 tools.forEach(({ tool, runner }) => {
@@ -186,7 +198,7 @@ async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
   
-  console.error('✅ aigroup-market-mcp Server 已成功连接（stdio 传输）');
+  console.error('✅ aigroup-market-mcp Server 已成功连接（stdio 传输）test');
   console.error(`🔧 已注册工具数量: ${tools.length + 1}`);
 }
 
